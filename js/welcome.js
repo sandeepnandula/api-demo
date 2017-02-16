@@ -1,12 +1,10 @@
 import React, { PropTypes, Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
 
 function Welcome (props) {
     return(
       <div className="App">
         <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+          <img  className="App-logo" alt="logo" />
           <h2>Welcome to the Puzzle </h2>
         </div>
 
