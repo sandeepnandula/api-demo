@@ -9691,7 +9691,7 @@ function Welcome(props) {
     _react2.default.createElement(
       "div",
       { className: "App-header" },
-      _react2.default.createElement("img", { className: "App-logo", alt: "logo" }),
+      _react2.default.createElement("img", { src: "./css/logo.svg", className: "App-logo", alt: "logo" }),
       _react2.default.createElement(
         "h2",
         null,
@@ -21970,8 +21970,6 @@ var _App = __webpack_require__(80);
 var _App2 = _interopRequireDefault(_App);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-// import '../css/index.css';
 
 _reactDom2.default.render(_react2.default.createElement(_App2.default, null), document.getElementById('root'));
 

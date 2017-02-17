@@ -4,7 +4,7 @@ function Welcome (props) {
     return(
       <div className="App">
         <div className="App-header">
-          <img  className="App-logo" alt="logo" />
+          <img src="./css/logo.svg" className="App-logo" alt="logo" />
           <h2>Welcome to the Puzzle </h2>
         </div>
 

@@ -19,7 +19,7 @@ import os
 
 from google.appengine.ext.webapp import template
 
-welcomePath = os.path.join(os.path.dirname(__file__), './html/index.html')
+welcomePath = os.path.join(os.path.dirname(__file__), 'index.html')
 
 class MainHandler(webapp2.RequestHandler):
     def write(self, *a, **kw):

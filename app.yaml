@@ -15,9 +15,22 @@ handlers:
 - url: /css
   static_dir: css
 
+- url: /images
+  static_dir: images
+
 - url: .*
   script: main.app
 
 libraries:
 - name: webapp2
   version: "2.5.2"
+skip_files:
+- ^(.*/)?#.*#$
+- ^(.*/)?.*~$
+- ^(.*/)?.*\.py[co]$
+- ^(.*/)?.*\.map$
+- ^(.*/)?.*\.md$
+- ^(.*/)?.*/RCS/.*$
+- ^(.*/)?\..*$
+- ^(.*/)?\.bak$
+- ^node_modules$
