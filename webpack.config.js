@@ -2,12 +2,20 @@ const path = require("path");
 const webpack = require('webpack');
 const WebpackNotifierPlugin = require('webpack-notifier');
 
-
+const plugins = [new WebpackNotifierPlugin({ alwaysNotify: true })];
+  plugins.push(
+    new webpack.DefinePlugin({
+      'process.env': { NODE_ENV: JSON.stringify('production') },
+    }),
+    new webpack.optimize.UglifyJsPlugin({
+      mangle: true, sourcemap: false, comments: false,
+    })
+  );
 module.exports = {
   entry: './app/js/index.js',
   output: {
     path: path.join(__dirname,"./app/js/"),
-    filename: './build/bundle.js',
+    filename: './build/bundle.min.js',
   },
   module: {
     loaders: [
@@ -24,5 +32,6 @@ module.exports = {
        loader: "style-loader!css-loader",
      }
    ]
-  }
+ },
+plugins,
 }
