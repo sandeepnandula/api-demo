@@ -1,16 +1,16 @@
 # Hello-World
 Hello World program with complete react and python server side setup
 
-# For MAC
+## For MAC
 
 npm start
 
-# For Windows
+## For Windows
 
 npm run win
 
 npm run webpack
 
-# Installing dependencies
+## Installing dependencies
 
 npm install
