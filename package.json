@@ -2,11 +2,13 @@
   "name": "react-puzzle",
   "version": "1.0.0",
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --progress --colors",
-    "build": "webpack --progress --colors"
+    "start": "webpack --colors --watch --progress & dev_appserver.py app/ --port=8080",
+    "deploy": "NODE_ENV=production webpack --progress && appcfg.py update app/",
+    "win": "dev_appserver.py app/ --port=7080",
+    "build": "webpack --colors --watch --progress",
+    "webpack": "webpack --colors --watch --progress"
   },
   "author": "",
   "license": "ISC",

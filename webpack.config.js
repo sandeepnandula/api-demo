@@ -2,12 +2,12 @@ const path = require("path");
 const webpack = require('webpack');
 const WebpackNotifierPlugin = require('webpack-notifier');
 
+
 module.exports = {
-  entry: './js/index.js',
-  target: 'node',
+  entry: './app/js/index.js',
   output: {
-    path: path.join(__dirname,"./js/"),
-    filename: 'bundle.js',
+    path: path.join(__dirname,"./app/js/"),
+    filename: './build/bundle.js',
   },
   module: {
     loaders: [
