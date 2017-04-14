@@ -1,2 +1,5 @@
-
+*.datastore
+*.blobs
+*.pyc
+.idea/*
 node_modules

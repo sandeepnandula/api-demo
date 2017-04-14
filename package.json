@@ -1,10 +1,10 @@
 {
-  "name": "react-puzzle",
+  "name": "helloworld-react-py",
   "version": "1.0.0",
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack --colors --watch --progress & dev_appserver.py app/ --port=8080",
+    "start": "webpack --colors --watch --progress & dev_appserver.py app/ --port=8889",
     "deploy": "NODE_ENV=production webpack --progress && appcfg.py update app/",
     "win": "dev_appserver.py app/ --port=7080",
     "build": "webpack --colors --watch --progress",
