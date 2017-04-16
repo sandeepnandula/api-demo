@@ -14,10 +14,10 @@ const plugins = [new WebpackNotifierPlugin({ alwaysNotify: true })];
     })
   );
 module.exports = {
-  entry: './app/js/index.js',
+  entry: './app/js/HomePage.js',
   output: {
     path: path.join(__dirname,"./app/js/"),
-    filename: './build/bundle.min.js',
+    filename: './build/HomePage.min.js',
   },
   module: {
     loaders: [

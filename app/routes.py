@@ -4,5 +4,6 @@ import webapp2
 route_list = []
 
 route_list.extend([
-    webapp2.Route(r'/', handler='handlers.HomePageHandler:warm_up', methods="GET")
+    webapp2.Route(r'/', handler='handlers.HomePageHandler:load_home_page', methods="GET")
+    # webapp2.Route(r'/', handler='handlers.HomePageHandler:warm_up', methods="GET")
 ])
