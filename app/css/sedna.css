@@ -13,6 +13,9 @@ body{
 	content: "";
 	display: block;
 }
+input{
+	margin-top: 15px; 
+}
 h2{
 	color: white;
 }

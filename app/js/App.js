@@ -99,7 +99,7 @@ class App extends Component {
         		<button className="button" onClick={this.onClickGet}>GET</button>
         		<button className="button" onClick={() => this.setState({ showPostModel: true })}>POST</button>
         	</div>
-          <div style={{ margin: '0 20% auto', maxHeight: '50%', overflow: 'scroll'}}>
+          <div style={{ margin: '0 15%', maxHeight: '50%', overflow: 'scroll'}}>
             <ul >
               <li><h2><span>UserName</span><span>Email</span><span>Fav_Food</span></h2></li>
               {this.state.userList}

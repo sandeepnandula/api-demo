@@ -42,6 +42,7 @@ const webpack = require('webpack');
 const path = require("path");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackNotifierPlugin = require('webpack-notifier');
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 var config = {
   context: __dirname + '/', // `__dirname` is root of project and `src` is source
@@ -63,13 +64,10 @@ var config = {
       }]
     }
   ]
-}
-// plugins: [
-//   new WebpackNotifierPlugin({ title: 'Webpack', alwaysNotify: true }),
-//   new UglifyJsPlugin({
-//     sourceMap: true
-//   })
-//  ]
+},
+plugins: [
+  new WebpackNotifierPlugin({ title: 'Webpack', alwaysNotify: true }),
+ ]
 };
 
 module.exports = config
