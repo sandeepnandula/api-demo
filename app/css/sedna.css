@@ -1,0 +1,874 @@
+*{
+	box-sizing: border-box;
+	font-family: 'PT Sans Narrow', sans-serif;
+	font-weight: lighter;
+}
+
+body{
+	margin: 0;
+}
+
+.clear::after{
+	clear: both;
+	content: "";
+	display: block;
+}
+h2{
+	color: white;
+}
+span{
+	color: white;
+	padding: 50px;
+	overflow: scroll;
+}
+ul{
+	list-style-type: none;
+}
+/*Hero section starts here*/
+
+.herosection{
+	width: 100%;
+	background: url('/Images/overlay.png'),no-repeat,url('/Images/hero01.png') no-repeat;
+	background-size: cover,cover;
+	padding: 30px 200px;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	height: 690px;
+}
+
+.navigation{
+	border-bottom: 1px solid #979797;
+	padding-bottom: 25px;
+	animation: borderanimate 2s linear;
+	position: fixed;
+	z-index: 4;
+	display: block;
+	overflow: hidden;
+	background-color: #282c38;
+	width: 100%;
+	margin: 0 auto;
+	top: 0;
+	padding: 25px 200px;
+}
+@keyframes borderanimate{
+	0%{top: -80px;}
+	25%{top: 5px;}
+	50%{top: -5px;}
+	75%{top: 2px;}
+	100%{top: 0;}
+}
+
+.navigation img{
+	animation: navimganimate 2s linear;
+	position: relative;
+}
+@keyframes navimganimate{
+	0%{top: -80px;}
+	25%{top: 5px;}
+	50%{top: -5px;}
+	75%{top: 2px;}
+	100%{top: 0;}
+}
+
+.features{
+	display: inline-block;
+	margin: 0;
+	list-style-type: none;
+}
+
+.features li{
+	float: left;
+	margin: 5px 5px 0;
+	position: relative;
+	animation: featuresanimate 2s linear;
+}
+@keyframes featuresanimate{
+	0%{top: -80px;}
+	25%{top: 5px;}
+	50%{top: -5px;}
+	75%{top: 2px;}
+	100%{top: 0;}
+}
+
+.features li a{
+	text-decoration: none;
+	color: #ffffff;
+	font-size: 13px;
+	transition: color 0.5s;
+}
+
+.features li a:hover{
+	color: #979797;
+	transition: color 0.5s;
+}
+
+.logsign{
+	float: right;
+	margin: 0;
+	padding-left: 0;
+}
+
+.logsign li{
+	display: inline-block;
+}
+
+.logsign li button{
+	cursor: pointer;
+	background-color: transparent;
+	color: #ffffff;
+	border: none;
+	outline: none;
+	font-size: 13px;
+	border: 1px solid transparent;
+	width: 100px;
+	height: 28px;
+	transition: border 0.3s,border-radius 0.3s;
+	animation: navbuttonanimate 2s linear;
+	position: relative;
+}
+
+.logsign li button:hover{
+	border: 1px solid #ffffff;
+	border-radius: 15px;
+	transition: border 0.3s,border-radius 0.3s;
+}
+
+
+
+/*.button1{
+	animation: buttononeanimate 2s linear;
+	position: relative;
+}*/
+@keyframes navbuttonanimate{
+	0%{top: -80px;}
+	25%{top: 5px;}
+	50%{top: -5px;}
+	75%{top: 2px;}
+	100%{top: 0;}
+}
+/*@keyframes buttononeanimate{
+	0%{top: -80px;left: 200px;}
+	25%{top: 0px;left: 114px;}
+	50%{top: -15px;left: 52px;}
+	75%{top: 3px; left: 0px}
+	100%{top: 0px;}
+}*/
+
+/*.button2{
+	animation: buttontwoanimate 2s linear;
+	position: relative;
+}
+@keyframes buttontwoanimate{
+	0%{top: -80px;}
+	25%{top: 5px;}
+	50%{top: -5px;}
+	75%{top: 2px;}
+	100%{top: 0;}
+}*/
+/*@keyframes buttontwoanimate{
+	0%{top: -80px;right: 200px;}
+	25%{top: 0px;right: 114px;}
+	50%{top: -15px;right: 52px;}
+	75%{top: 3px; right: 0px}
+	100%{top: 0px;}
+}*/
+
+.icon{
+	display: none;
+}
+
+.close{
+	display: none;
+}
+
+.navigationresponse{
+	display: none;
+	z-index: 4;
+	position: fixed;
+	top: 85px;
+}
+
+.herocontent{
+	font-size: 17px;
+	margin: 71px auto;
+	text-align: center;
+	color: #ffffff;
+}
+
+/*.herocontent h1{
+	animation: heroheadanimate 1.5s linear;
+	position: relative;
+}
+@keyframes heroheadanimate{
+	0%{left: -800px;transform: rotate(0deg);}
+	50%{left: -300px;transform: rotate(180deg);}
+	100%{left: 0px;transform: rotate(360deg);}
+}*/
+
+.button{
+	margin: 25px 5px 0;
+	cursor: pointer;
+	background-color: transparent;
+	color: #ff5274;
+	border: none;
+	outline: none;
+	font-size: 13px;
+	border: 1px solid #ff5274;
+	border-radius: 25px;
+	width: 200px;
+	height: 55px;
+	transition: background-color 0.5s,color 0.5s;
+}
+
+.button:hover{
+	color: #ffffff;
+	background-color: #ff5274;
+	transition: background-color 0.5s,color 0.5s;
+}
+
+
+.arrowdown{
+	color: #ffffff;
+	transition: color 1s;
+	position: relative;
+	display: block;
+	margin: 0 50%;
+	bottom: 60px;
+	animation: arrowanimate 1s linear infinite;
+}
+@keyframes arrowanimate{
+	0%{bottom: 90px;opacity: 0}
+	50%{bottom: 60px;opacity: 1;}
+	100%{bottom: 35px;opacity: 0;}
+}
+
+.arrowdown:hover{
+	color: #ff5274;
+	transition: color 0.5s;
+}
+
+.loginmodal{
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(128,128,128,0.5);
+	position: fixed;
+	top: 0;
+	left: auto;
+	z-index: 100;
+}
+@keyframes form{
+	0%{top: -1000px;}
+	100%{top: 0;}
+}
+.loginform{
+	width: 700px;
+	background-color: #ffffff;
+	margin: 30px auto;
+	text-align: center;
+	padding: 30px;
+	border-radius: 5px;
+	position: relative;
+	animation: form 0.3s linear;
+}
+.loginform form a{
+	color: #ff5274;
+	cursor: pointer;
+	margin-left: 30px;
+}
+.loginform form input{
+	margin: 20px;
+	padding: 5px;
+	font-size: 14px;
+}
+.loginform form input[type=checkbox]{
+	margin: 20px 5px;
+	cursor: pointer;
+}
+.modalbutton{
+	margin: 30px 0;
+	cursor: pointer;
+	background-color: transparent;
+	color: #ff5274;
+	border: none;
+	outline: none;
+	font-size: 13px;
+	border: 1px solid #ff5274;
+	border-radius: 25px;
+	width: 200px;
+	height: 55px;
+	transition: background-color 0.5s,color 0.5s;
+}
+
+.modalbutton:hover{
+	color: #ffffff;
+	background-color: #ff5274;
+	transition: background-color 0.5s,color 0.5s;
+}
+.formhead{
+	font-weight: bolder;
+	font-size: 30px;
+}
+.loginform span i{
+	color: #ff5274;
+	float: right;
+	cursor: pointer;
+}
+
+
+.signupmodal{
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(128,128,128,0.5);
+	position: fixed;
+	top: 0;
+	left: auto;
+	z-index: 100;
+}
+.signupform{
+	width: 700px;
+	background-color: #ffffff;
+	margin: 30px auto;
+	text-align: center;
+	padding: 30px;
+	border-radius: 5px;
+	position: relative;
+	animation: form 0.3s linear;
+}
+.signupform form a{
+	color: #ff5274;
+	cursor: pointer;
+	margin-left: 30px;
+}
+.signupform form input{
+	margin: 20px;
+	padding: 5px;
+	font-size: 14px;
+}
+.signupform form input[type=checkbox]{
+	margin: 20px 5px;
+	cursor: pointer;
+}
+.signupform span i{
+	color: #ff5274;
+	float: right;
+	cursor: pointer;
+}
+/*Hero section ends here*/
+
+/*Intro starts here*/
+
+.intro{
+	padding: 95px 200px;
+	font-size: 0;
+	position: relative;
+	z-index: 3;
+	margin-top:690px;
+	background-color: #ffffff;
+}
+
+.intro ul{
+	padding-left: 0;
+}
+
+.intro ul li{
+	display: inline-block;
+	width: calc(100%/3);
+	font-size: 13px;
+	vertical-align: top;
+}
+
+.intro ul li h4{
+	margin-top: 0;
+	color: #3D4351;
+}
+
+.intro ul li p{
+	color: #607286;
+}
+
+
+/*Intro ends here*/
+
+
+/*Designed Using Sketch starts here*/
+
+.design_sketch{
+	border: 1px solid #E6E9EA;
+	background: url('/Images/Macbook_Pro.png') no-repeat right;
+	background-color: #F7F9FA;
+	background-size: 550px 500px;
+	position: relative;
+	z-index: 3;
+	/*animation: designanimation 0.5s linear 1;*/
+}
+/*@keyframes designanimation{
+	0%{background-position: right -500px bottom -20px;}
+	100%{background-position: right;}
+}*/
+
+.designed_using_sketch{
+	padding: 120px 530px 240px 200px;
+}
+
+.designed_using_sketch h2{
+	color: #3D4351;
+	/*animation: headanimate 0.5s linear 1;
+	position: relative;*/
+}
+/*@keyframes headanimate{
+	0%{top: -400px;}
+	100%{top: 0;}
+}*/
+
+.designed_using_sketch p{
+	color: #607286;
+	line-height: 25px;
+	margin-bottom: 30px;
+	/*animation: paraanimate 0.6s linear 1;
+	position: relative;*/
+}
+/*@keyframes paraanimate{
+	0%{left: -1200px;}
+	100%{left: 0;}
+}*/
+
+/*.designed_using_sketch button{
+	animation: buttonanimate 0.6s linear 1;
+	position: relative;
+}
+@keyframes buttonanimate{
+	0%{bottom: -600px;}
+	100%{bottom: 0;}
+}*/
+
+/*Designed Using Sketch ends here*/
+
+/*News and Blog starts here*/
+.news_blog{
+	padding: 120px 200px;
+	font-size: 0;
+	position: relative;
+	z-index: 3;
+	background-color: #ffffff;
+}
+
+.news_blog h3{
+	color: #3D4351;
+	font-size: 24px;
+	margin-bottom: 80px;
+}
+
+.codrops{
+	width: 50%;
+	display: inline-block;
+	border-right: 1px solid rgba(96,114,134,0.4);
+	padding-right: 60px;
+	vertical-align: top;
+}
+
+.codrops h4{
+	font-size: 15px;
+	color: #3D4351;
+	margin-top: 0;
+}
+
+.codrops p{
+	font-size: 15px;
+	color: #607286;
+}
+
+.spreading{
+	width: 50%;
+	display: inline-block;
+	padding-left: 60px;
+	vertical-align: top;
+}
+
+.spreading h4{
+	font-size: 15px;
+	color: #3D4351;
+	margin-top: 0;
+}
+
+.spreading p{
+	font-size: 15px;
+	color: #607286;
+}
+
+/*News and Blog ends here*/
+
+/*Footer starts here*/
+
+.footer{
+	padding: 25px 200px;
+	background-color: #282c38;
+	color: #ffffff;
+	text-align: center;
+	position: relative;
+	z-index: 3;
+}
+
+/*Footer ends here*/
+
+
+/*responsive media queries*/
+
+@media only screen and (max-width:1050px){
+	.herosection{
+		padding: 30px 160px;
+	}
+	.navigation{
+		padding: 30px 160px;
+	}
+	.features{
+		display: none;
+	}
+	.logsign{
+		display: none;
+	}
+	.icon{
+		float: right;
+		display: block;
+		animation: iconanimate 1.5s linear;
+		position: relative;
+	}
+	@keyframes iconanimate{
+		0%{top: -80px;}
+		25%{top: 5px;}
+		50%{top: -5px;}
+		75%{top: 2px;}
+		100%{top: 0;}
+	}
+	.close{
+		float: right;
+		display: block;
+		animation: closeanimate 1.5s linear;
+		position: relative;
+	}
+	@keyframes closeanimate{
+		0%{top: -80px;}
+		25%{top: 5px;}
+		50%{top: -5px;}
+		75%{top: 2px;}
+		100%{top: 0;}
+	}
+	ul.navigationresponse{
+		display: list-item;
+		list-style-type: none;
+		float: right;
+		width: 100%;
+		padding-left: 0;
+		margin: 0;
+		border: 1px solid #979797;
+		border-top: 0;
+		background-color: #282c38;
+	}
+	ul.navigationresponse li a{
+		text-align: center;
+		display: block;
+		color: #ffffff;
+		font-size: 15px;
+		text-decoration: none;
+		line-height: 25px;
+		transition: background-color 0.3s,color 0.3s;
+	}
+
+	ul.navigationresponse li a:hover{
+		color: #607286;
+		background-color: #ffffff;
+		transition: background-color 0.3s,color 0.3s;
+	}
+
+	.intro{
+		padding: 95px 160px;
+	}
+	.design_sketch{
+	background-size: 500px 500px;
+	}
+	.designed_using_sketch{
+	padding: 120px 490px 240px 160px;
+	}
+	.news_blog{
+		padding: 120px 160px;
+	}
+	.footer{
+		padding: 25px 160px;
+	}
+}
+
+/*1050px ends here*/
+
+
+@media only screen and (max-width:890px){
+	.herosection{
+		padding: 30px 120px;
+	}
+	.navigation{
+		padding: 30px 120px;
+	}
+	.intro{
+		padding: 95px 120px;
+	}
+	.design_sketch{
+	background-size: 450px 450px;
+	}
+	.designed_using_sketch{
+	padding: 120px 450px 200px 120px;
+	}
+	.news_blog{
+		padding: 120px 120px;
+	}
+	.footer{
+		padding: 25px 120px;
+	}
+}
+
+/*890px ends here*/
+
+@media only screen and (max-width:740px){
+	.herosection{
+		padding: 30px 90px;
+	}
+	.navigation{
+		padding: 30px 90px;
+	}
+	.intro{
+		padding: 95px 90px;
+	}
+	.design_sketch{
+	background: #F7F9FA;
+	padding: 160px 0;
+	}
+	.designed_using_sketch{
+	padding: 160px 90px 0;
+	background: url('../Images/Macbook_Pro1.png') no-repeat top;
+	background-size: 300px 150px;
+	text-align: center;
+	}
+	.news_blog{
+		padding: 120px 90px;
+	}
+	.footer{
+		padding: 25px 90px;
+	}
+	.loginform{
+		width: 500px;
+	}
+	.signupform{
+		width: 500px;
+	}
+}
+
+/*720px ends here*/
+
+@media only screen and (max-width:660px){
+	.herosection{
+		padding: 30px 60px;
+	}
+	.navigation{
+		padding: 30px 60px;
+	}
+	.intro{
+		margin-top: 690px;
+		padding: 95px 60px;
+	}
+	.design_sketch{
+		padding: 95px 0;
+	}
+	.designed_using_sketch{
+	padding: 160px 60px 0;
+	}
+	.news_blog{
+		padding: 95px 60px;
+	}
+	.footer{
+		padding: 20px 60px;
+	}
+	.easily{
+		background: url('/Images/easily.png') no-repeat top;
+		padding: 50px 20px 0;
+		text-align: center;
+	}
+
+	.modern{
+		background: url('/Images/modern.png') no-repeat top;
+		padding: 50px 20px 0;
+		text-align: center;
+	}
+
+	.respon{
+		background: url('../Images/responsive.png') no-repeat top;
+		padding: 50px 20px 0;
+		text-align: center;
+	}
+
+	.news_blog h3{
+		text-align: center;
+		margin-bottom: 24px;
+	}
+
+	.codrops{
+		width: 100%;
+		display: block;
+		border-right: none;
+		text-align: center;
+		padding-right: 0;
+		padding-bottom: 20px;
+		border-bottom: 1px solid rgba(96,114,134,0.4);
+	}
+	.spreading{
+		width: 100%;
+		display: block;
+		padding-left: 0;
+		padding-top: 20px;
+		text-align: center;
+	}
+	.spreading h4{
+		margin-top: 15px;
+	}
+	.loginform{
+		width: 450px;
+	}
+	.signupform{
+		width: 450px;
+	}
+	.loginform form input{
+		margin: 10px;
+	}
+	.loginform form input[type=checkbox]{
+		margin: 10px 5px;
+	}
+	.signupform form input{
+		margin: 10px;
+	}
+	.signupform form input[type=checkbox]{
+		margin: 10px 5px;
+	}
+}
+
+/*660 ends here*/
+
+@media only screen and (max-width: 545px){
+	.button{
+		margin: 40px 0 0;
+	}
+	.intro{
+		padding: 60px;
+	}
+	.intro ul li{
+		width: 100%;
+	}
+	.easily{
+		padding: 50px 20px;
+	}
+	.modern{
+		padding: 50px 20px;
+	}
+	.respon{
+		padding: 50px 20px 0;
+	}
+	.design_sketch{
+		padding: 60px 0;
+	}
+	.news_blog{
+		padding: 60px;
+	}
+	.arrowdown{
+		bottom: 130px;
+	}
+	@keyframes arrowanimate{
+	0%{bottom: 155px;opacity: 0}
+	50%{bottom: 130px;opacity: 1;}
+	100%{bottom: 105px;opacity: 0;}
+	}
+	.loginform{
+		width: 350px;
+		padding: 20px;
+	}
+	.signupform{
+		width: 350px;
+		padding: 20px;
+	}
+	.formhead{
+		font-size: 24px;
+	}
+	.modalbutton{
+		margin: 40px 0 0;
+	}
+}
+
+/*545 ends here*/
+
+@media only screen and (max-width: 473px){
+	.button{
+		margin: 30px 0 0;
+		width: 135px;
+		height: 35px;
+		font-size: 10px;
+	}
+	/*.herocontent{
+		margin: 105px auto;
+	}*/
+	h1{
+		font-size: 24px;
+	}
+	p{
+		font-size: 12px;
+	}
+	.arrowdown{
+		margin: 0 47%;
+	}
+	@keyframes arrowanimate{
+		0%{bottom: 120px;opacity: 0}
+		50%{bottom: 100px;opacity: 1;}
+		100%{bottom: 80px;opacity: 0;}
+	}
+	.modalbutton{
+		margin: 30px 0 0;
+		width: 135px;
+		height: 35px;
+		font-size: 10px;
+	}
+}
+
+/*473 ends here*/
+
+@media only screen and (max-height: 500px){
+	.herosection{
+		height: 500px;
+	}
+	.herocontent{
+		margin: 105px auto;
+	}
+	.arrowdown{
+		margin: 0 47%;
+	}
+	@keyframes arrowanimate{
+		0%{bottom: 110px;opacity: 0}
+		50%{bottom: 90px;opacity: 1;}
+		100%{bottom: 70px;opacity: 0;}
+	}
+	.intro{
+		margin-top: 500px;
+	}
+}
+
+/*height 500 ends here*/
+
+@media only screen and (max-height: 400px){
+	.herosection{
+		height: 400px;
+	}
+	.herocontent{
+		margin: 65px auto;
+	}
+	@keyframes arrowanimate{
+		0%{bottom: 80px;opacity: 0}
+		50%{bottom: 60px;opacity: 1;}
+		100%{bottom: 40px;opacity: 0;}
+	}
+	.intro{
+		margin-top: 400px;
+	}
+}
