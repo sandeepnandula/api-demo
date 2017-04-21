@@ -14,18 +14,27 @@ body{
 	display: block;
 }
 input{
-	margin-top: 15px; 
+	margin-top: 15px;
+	position: relative;
+	top: -4px;
 }
 h2{
 	color: white;
+	text-align: center;
+}
+h4{
+	text-align: center;
 }
 span{
 	color: white;
-	padding: 50px;
 	overflow: scroll;
+	display: inline-block;
+	width: 200px;
+
 }
 ul{
 	list-style-type: none;
+	padding-left: 0;
 }
 /*Hero section starts here*/
 
@@ -37,12 +46,11 @@ ul{
 	position: fixed;
 	z-index: 1;
 	top: 0;
-	height: 690px;
+	height: 100%;
 }
 
 .navigation{
 	border-bottom: 1px solid #979797;
-	padding-bottom: 25px;
 	animation: borderanimate 2s linear;
 	position: fixed;
 	z-index: 4;
@@ -52,7 +60,7 @@ ul{
 	width: 100%;
 	margin: 0 auto;
 	top: 0;
-	padding: 25px 200px;
+	padding: 15px 200px 10px;
 }
 @keyframes borderanimate{
 	0%{top: -80px;}
@@ -97,8 +105,9 @@ ul{
 .features li a{
 	text-decoration: none;
 	color: #ffffff;
-	font-size: 13px;
+	font-size: 24px;
 	transition: color 0.5s;
+	cursor: pointer;
 }
 
 .features li a:hover{
@@ -110,6 +119,7 @@ ul{
 	float: right;
 	margin: 0;
 	padding-left: 0;
+	margin-top: 10px;
 }
 
 .logsign li{
@@ -193,6 +203,7 @@ ul{
 }
 
 .herocontent{
+	width: 840px;
 	font-size: 17px;
 	margin: 71px auto;
 	text-align: center;
@@ -838,9 +849,6 @@ ul{
 /*473 ends here*/
 
 @media only screen and (max-height: 500px){
-	.herosection{
-		height: 500px;
-	}
 	.herocontent{
 		margin: 105px auto;
 	}
@@ -860,9 +868,6 @@ ul{
 /*height 500 ends here*/
 
 @media only screen and (max-height: 400px){
-	.herosection{
-		height: 400px;
-	}
 	.herocontent{
 		margin: 65px auto;
 	}

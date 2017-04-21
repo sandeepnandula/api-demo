@@ -19,6 +19,10 @@ class App extends Component {
     this.onClickGet = this.onClickGet.bind(this);
     this.onClickPut = this.onClickPut.bind(this);
     this.onClickDelete = this.onClickDelete.bind(this);
+    this.setCookie = this.setCookie.bind(this);
+  }
+  setCookie() {
+    fetch('/setCookie', {method: 'GET'});
   }
   onClickPut() {
     const email =  this.state.email;
@@ -85,12 +89,12 @@ class App extends Component {
         <div className="clear navigation">
           {/* <h1>Welcome to the Session everyone</h1> */}
           <ul className="features">
-            <li><a>Welcome to the Session everyone...</a></li>
-          </ul>
-          <ul className="logsign">
-            <li><button type="button" onClick={() => this.setState({ showPutModel: true })} >PUT</button></li>
-            <li><button type="button" onClick={() => this.setState({ showDeleteModel: true })}>DELETE</button></li>
-          </ul>
+            <li><a>FULL</a></li>          </ul>
+
+            <ul className="logsign">
+            <li> <button type='button' onClick={this.setCookie}>Set Cookie</button>
+              </li>
+            </ul>
         </div>
         <div className="herosection">
         	<div className="herocontent" id="herocontent">
@@ -98,8 +102,10 @@ class App extends Component {
         		<p>Hi! this is Sandeep, let's learn together something new today.</p>
         		<button className="button" onClick={this.onClickGet}>GET</button>
         		<button className="button" onClick={() => this.setState({ showPostModel: true })}>POST</button>
+            <button className="button" onClick={() => this.setState({ showPutModel: true })} >PUT</button>
+            <button className="button" onClick={() => this.setState({ showDeleteModel: true })}>DELETE</button>
         	</div>
-          <div style={{ margin: '0 15%', maxHeight: '50%', overflow: 'scroll'}}>
+          <div style={{     maxHeight: '50%', overflow: 'scroll'}}>
             <ul >
               <li><h2><span>UserName</span><span>Email</span><span>Fav_Food</span></h2></li>
               {this.state.userList}
@@ -109,9 +115,6 @@ class App extends Component {
         {/* put modal */}
         <div className="loginmodal" style={{ display: this.state.showPutModel ? 'block' : 'none' }}>
         	<div className="loginform">
-        		<span>
-        			<i className="fa fa-remove fa-lg closeform"></i>
-        		</span>
         			<label className="formhead">PUT OR UPDATE</label><br/>
               <span style={{ color: 'red' }}>{this.state.message ? this.state.message : ''}</span><br/>
         			 Email : <input type="text" className="Username" placeholder="Enter Email"  onChange={e => this.setState({ email: e.target.value })}/><br/>
@@ -123,9 +126,6 @@ class App extends Component {
         {/* post modal */}
         <div className="signupmodal" style={{ display: this.state.showPostModel ? 'block' : 'none' }}>
         	<div className="signupform">
-        		<span>
-        			<i className="fa fa-remove fa-lg closeform"></i>
-        		</span>
         			<label className="formhead">POST FORM</label><br/>
               <span style={{ color: 'red' }}>{this.state.message ? this.state.message : ''}</span><br/>
         			User Name : <input type="text" className="Username" placeholder="Enter user name" onChange={e => this.setState({ userName: e.target.value })}/><br/>
@@ -139,9 +139,6 @@ class App extends Component {
         {/* DELETE model  */}
         <div className="loginmodal" style={{ display: this.state.showDeleteModel ? 'block' : 'none' }}>
         	<div className="loginform">
-        		<span>
-        			<i className="fa fa-remove fa-lg closeform"></i>
-        		</span>
         			<label className="formhead">DELETE</label><br/>
               <span style={{ color: 'red' }}>{this.state.message ? this.state.message : ''}</span><br/>
         			 Email : <input type="text" className="Username" placeholder="Enter Email" onChange={e => this.setState({ email: e.target.value })}/><br/>

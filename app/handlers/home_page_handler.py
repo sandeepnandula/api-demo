@@ -1,5 +1,6 @@
 import logging
 import json
+import uuid
 from base import BaseHandler
 from services.home_page_services import HomePageServices
 
@@ -13,6 +14,13 @@ class HomePageHandler(BaseHandler):
 
     def warm_up(self):
         self.render_text("hello world")
+
+    def set_cookie(self):
+        cookie = str(uuid.uuid1())
+        log.info('calling cok{}.'.format(cookie))
+        self.response.set_cookie('sessionId', cookie,
+                                 max_age=60 * 60, path='/',
+                                 secure=False)
 
     def get_all_users(self):
         users = HomePageServices.get_all_users()
